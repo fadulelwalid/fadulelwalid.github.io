@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
 
                 <span className="footer__copy">
-                    &#169; F.E.F - 2026
+                    &#169; 2026 F.E.F
                 </span>
             </div>
         </footer>
