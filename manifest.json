@@ -1,0 +1,26 @@
+{
+  "short_name": "Fadul",
+  "name": "Fadul - ePortfolio",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "// old react icons - disabled": "remove these lines later if needed",
+  "icons_disabled_192": {
+    "src": "logo192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  "icons_disabled_512": {
+    "src": "logo512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  },
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
