@@ -8,19 +8,29 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-    emailjs
-      .sendForm('service_01i10ey', 'template_7pt6jfe', form.current, {
-        publicKey: 'iTNYUIFMK_8NiyrNE',
-      })
-      e.target.reset()
-      //.then(
-      //  () => {
-      //    console.log('SUCCESS!');
-      //  },
-      //  (error) => {
-      //    console.log('FAILED...', error.text);
-      //  },
-      //);
+        // Basic validation check - EmailJS handles it on backend
+        const emailInput = form.current.elements.email;
+        if (!emailInput.value.trim()) {
+            alert("Please enter your email address.");
+            emailInput.focus();
+            return;
+        }
+
+        emailjs
+        .sendForm('service_01i10ey', 'template_7pt6jfe', form.current, {
+            publicKey: 'iTNYUIFMK_8NiyrNE',
+        })
+        .then(
+            () => {
+                console.log('SUCCESS!');
+                alert("Message sent successfully!"); 
+                form.current.reset();
+            },
+            (error) => {
+                console.log('FAILED...', error.text);
+                alert("Failed to send message. Please try again.");
+            }
+        );
     };
 
     return (
@@ -33,6 +43,7 @@ const Contact = () => {
                     <h3 className="contact__title">Talk to me</h3>
 
                     <div className="contact__info">
+                        {/*
                         <div className="contact__card">
                             <i className="bx bx-mail-send contact__card-icon"></i>
 
@@ -42,8 +53,8 @@ const Contact = () => {
                             <a href="mailto:fadulelwalid@outlook.com" className="contact__button">Write me{" "}
                                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
-                        </div>
-
+                        </div> 
+                        */}
                         <div className="contact__card">
                             <i className="bx bxl-whatsapp contact__card-icon"></i>
 
@@ -70,7 +81,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="contact__content"> {/* mark... */ }
+                <div className="contact__content"> 
                     <h3 className="contact__title">Write me an email</h3>
 
                     <form ref={form} onSubmit={sendEmail} className="contact__form">
@@ -85,7 +96,7 @@ const Contact = () => {
                         </div>
 
                         <div className="contact__form-div">
-                            <label className="contact__form-tag">Mail</label>
+                            <label className="contact__form-tag">Email</label>
                             <input
                                 type="email"
                                 name="email"
@@ -94,14 +105,14 @@ const Contact = () => {
                             />
                         </div>
 
-                        <div className="contact__form-div contact__form-area"> {/* change this to "message" (emailjs) */ }
+                        <div className="contact__form-div contact__form-area"> 
                             <label className="contact__form-tag">Message</label>
                             <textarea
                                 name="message"
                                 cols="30"
                                 rows="10"
                                 className="contact__form-input"
-                                placeholder="Write your message"
+                                placeholder="Type your message here..."
                             ></textarea>
                         </div>
 
