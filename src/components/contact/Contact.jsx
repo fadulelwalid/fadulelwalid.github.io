@@ -61,7 +61,7 @@ const Contact = () => {
                             <h3 className="contact__card-title">Whatsapp</h3>
                             <span className="contact__card-data">+47 471 55 819</span>
 
-                            <a href="https://api.whatsapp.com/send?phone=4747155819&text=Hello, more information!" className="contact__button">
+                            <a href="https://api.whatsapp.com/send?phone=4747155819&text=Hello, more information!" className="contact__button" target="_blank" rel="noopener noreferrer">
                                 Write me{" "}
                                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
@@ -73,7 +73,7 @@ const Contact = () => {
                             <h3 className="contact__card-title">Messenger</h3>
                             <span className="contact__card-data">fadul.elwalid</span>
 
-                            <a href="https://m.me/fadul.elwalid" className="contact__button">
+                            <a href="https://m.me/fadul.elwalid" className="contact__button" target="_blank" rel="noopener noreferrer">
                                 Write me{" "}
                                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
@@ -96,7 +96,7 @@ const Contact = () => {
                         </div>
 
                         <div className="contact__form-div">
-                            <label className="contact__form-tag">Email</label>
+                            <label className="contact__form-tag">Email <span className="required">*</span></label>
                             <input
                                 type="email"
                                 name="email"
@@ -116,7 +116,7 @@ const Contact = () => {
                             ></textarea>
                         </div>
 
-                        <button className="button button--flex">
+                        <button type="submit" className="button button--flex">
                             Send Message
                             <svg
                             class="button__icon"
