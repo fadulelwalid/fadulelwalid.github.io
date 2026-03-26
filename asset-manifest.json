@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.eb01648f.css",
-    "main.js": "/static/js/main.e7133a6e.js",
+    "main.js": "/static/js/main.759f08b4.js",
     "static/js/453.fe5984aa.chunk.js": "/static/js/453.fe5984aa.chunk.js",
     "static/media/fadulelwalid-CV.pdf": "/static/media/fadulelwalid-CV.e98f7d08cb8d73a14459.pdf",
     "index.html": "/index.html",
     "main.eb01648f.css.map": "/static/css/main.eb01648f.css.map",
-    "main.e7133a6e.js.map": "/static/js/main.e7133a6e.js.map",
+    "main.759f08b4.js.map": "/static/js/main.759f08b4.js.map",
     "453.fe5984aa.chunk.js.map": "/static/js/453.fe5984aa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb01648f.css",
-    "static/js/main.e7133a6e.js"
+    "static/js/main.759f08b4.js"
   ]
 }
